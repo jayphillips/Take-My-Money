@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PaymentDataVC.swift
 //  Take My Money
 //
 //  Created by Jay Phillips on 11/2/20.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PaymentDataVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
