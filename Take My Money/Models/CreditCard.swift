@@ -8,15 +8,17 @@
 import Foundation
 
 struct CreditCard {
-    var creditCardNumber: Int
-    var expirationDate: Date
-    var cvv: Int
+    var creditCardNumber: String
+    var expirationDate: String
+    var cvv: String
     var cardHolderName: String
+    var logoImage: String
     
-    init(creditCardNumber: Int, expirationDate: Date, cvv: Int, cardHolderName: String) {
+    init(creditCardNumber: String, expirationDate: String, cvv: String, cardHolderName: String, logoImage: String) {
         self.creditCardNumber = creditCardNumber
         self.expirationDate = expirationDate
         self.cvv = cvv
         self.cardHolderName = cardHolderName
+        self.logoImage = logoImage
     }
 }

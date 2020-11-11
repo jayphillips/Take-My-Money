@@ -11,4 +11,10 @@ class Data {
     
     static let instance = Data()
     
+    var paymentType: PaymentType?
+    
+    enum PaymentType {
+        case paypal, credit, wallet
+    }
+    
 }

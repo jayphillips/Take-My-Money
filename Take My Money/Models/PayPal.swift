@@ -10,9 +10,11 @@ import Foundation
 struct PayPal {
     var emailAddress: String
     var password: String
+    var logoImage: String
     
-    init(emailAddress: String, password: String) {
+    init(emailAddress: String, password: String, logoImage: String) {
         self.emailAddress = emailAddress
         self.password = password
+        self.logoImage = logoImage
     }
 }

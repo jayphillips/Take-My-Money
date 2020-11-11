@@ -317,6 +317,7 @@
                         <outlet property="payPalStackView" destination="sHe-nY-xXw" id="PhZ-6m-mC7"/>
                         <outlet property="paypalMethodButton" destination="KVk-Yg-nxz" id="ie9-tY-F6Y"/>
                         <outlet property="proceedToConfirmButton" destination="F7a-7N-SOW" id="m0S-fr-Nl3"/>
+                        <outlet property="saveCardInformation" destination="YVD-k6-Unf" id="HCk-hc-jt3"/>
                         <outlet property="totalPriceLabel" destination="fpA-ag-ocY" id="VAy-50-AOP"/>
                         <outlet property="walletMethodButton" destination="COG-mT-W26" id="yTt-uf-9Hn"/>
                         <outlet property="walletStackView" destination="O4S-ZM-ghn" id="3U8-tY-zd7"/>
@@ -364,33 +365,40 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKA-fo-ckW">
                                         <rect key="frame" x="0.0" y="35" width="374" height="66"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="creditcard.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6rr-XQ-G05">
-                                                <rect key="frame" x="8" y="9.5" width="50" height="46.5"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallet.pass.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6rr-XQ-G05">
+                                                <rect key="frame" x="8" y="8" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="4UA-bR-9Jo"/>
                                                     <constraint firstAttribute="height" constant="50" id="aPe-mY-FNp"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jay Phillips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahh-6u-NxD">
-                                                <rect key="frame" x="98" y="8" width="65" height="18"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="13"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Card Ending in **01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyc-Nl-W4D">
-                                                <rect key="frame" x="98" y="37" width="117" height="18"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="13"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="Zvf-kY-lT7">
+                                                <rect key="frame" x="98" y="10" width="266" height="46"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Jay Phillips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahh-6u-NxD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="266" height="17"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="13"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Card Ending in **01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyc-Nl-W4D">
+                                                        <rect key="frame" x="0.0" y="28" width="266" height="18"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="13"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="6rr-XQ-G05" secondAttribute="bottom" constant="8" id="FN0-MW-cEh"/>
+                                            <constraint firstItem="Zvf-kY-lT7" firstAttribute="top" secondItem="WKA-fo-ckW" secondAttribute="top" constant="10" id="Nh3-To-0sa"/>
+                                            <constraint firstAttribute="bottom" secondItem="Zvf-kY-lT7" secondAttribute="bottom" constant="10" id="RDt-oc-04M"/>
+                                            <constraint firstAttribute="trailing" secondItem="Zvf-kY-lT7" secondAttribute="trailing" constant="10" id="St0-p7-Niv"/>
                                             <constraint firstItem="6rr-XQ-G05" firstAttribute="top" secondItem="WKA-fo-ckW" secondAttribute="top" constant="8" id="gRF-YW-95G"/>
                                             <constraint firstItem="6rr-XQ-G05" firstAttribute="leading" secondItem="WKA-fo-ckW" secondAttribute="leading" constant="8" id="mn7-w9-Veh"/>
+                                            <constraint firstItem="Zvf-kY-lT7" firstAttribute="leading" secondItem="6rr-XQ-G05" secondAttribute="trailing" constant="40" id="tde-jJ-t5q"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -425,6 +433,12 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Method Saved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2i-L6-ahU">
+                                <rect key="frame" x="117" y="603" width="180.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fmc-I2-fwM"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
@@ -432,7 +446,9 @@
                             <constraint firstItem="1xi-BZ-lRg" firstAttribute="top" secondItem="Fmc-I2-fwM" secondAttribute="top" constant="10" id="6oS-Qm-NGE"/>
                             <constraint firstItem="Fmc-I2-fwM" firstAttribute="trailing" secondItem="e2d-lj-ffW" secondAttribute="trailing" constant="10" id="93N-E3-Prk"/>
                             <constraint firstItem="1xi-BZ-lRg" firstAttribute="leading" secondItem="Fmc-I2-fwM" secondAttribute="leading" constant="10" id="A5o-ch-trM"/>
+                            <constraint firstItem="G2i-L6-ahU" firstAttribute="top" secondItem="PFf-fa-15Q" secondAttribute="bottom" constant="70" id="CKI-V3-bjy"/>
                             <constraint firstItem="86V-1h-SXd" firstAttribute="top" secondItem="1xi-BZ-lRg" secondAttribute="bottom" constant="30" id="LYg-Cf-7rr"/>
+                            <constraint firstItem="G2i-L6-ahU" firstAttribute="centerX" secondItem="xSp-ow-8Vf" secondAttribute="centerX" id="LpZ-sk-q5l"/>
                             <constraint firstItem="86V-1h-SXd" firstAttribute="leading" secondItem="Fmc-I2-fwM" secondAttribute="leading" constant="10" id="Q0Q-1q-ljH"/>
                             <constraint firstItem="Fmc-I2-fwM" firstAttribute="trailing" secondItem="86V-1h-SXd" secondAttribute="trailing" constant="10" id="Y0n-g2-Ayz"/>
                             <constraint firstItem="Fmc-I2-fwM" firstAttribute="trailing" secondItem="PFf-fa-15Q" secondAttribute="trailing" constant="10" id="bPX-DL-UpR"/>
@@ -445,9 +461,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Payment" id="w3d-6K-JHT"/>
                     <connections>
-                        <outlet property="buyerFullNameLabel" destination="WKA-fo-ckW" id="kkU-Yv-eg9"/>
+                        <outlet property="buyerFullNameLabel" destination="ahh-6u-NxD" id="MCF-zQ-5hP"/>
                         <outlet property="paymentMethodDisplayLabel" destination="Zyc-Nl-W4D" id="L77-2z-luy"/>
                         <outlet property="paymentMethodLogoImage" destination="6rr-XQ-G05" id="iK2-On-mwl"/>
+                        <outlet property="paymentSavedNotificationLabel" destination="G2i-L6-ahU" id="YEy-NW-S8g"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="PaymentDataVC" id="iNx-kd-ois"/>
                     </connections>
                 </viewController>
@@ -475,13 +492,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="O3t-Qr-5MB"/>
         <segue reference="iNx-kd-ois"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="creditcard.circle" catalog="system" width="128" height="121"/>
-        <image name="creditcard.fill" catalog="system" width="128" height="88"/>
         <image name="promo" width="447" height="295"/>
+        <image name="wallet.pass.fill" catalog="system" width="115" height="128"/>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
