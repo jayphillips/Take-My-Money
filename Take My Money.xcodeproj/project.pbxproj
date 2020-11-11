@@ -13,6 +13,10 @@
 		69525C3025510B7700A43926 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69525C2E25510B7700A43926 /* Main.storyboard */; };
 		69525C3225510B7B00A43926 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69525C3125510B7B00A43926 /* Assets.xcassets */; };
 		69525C3525510B7B00A43926 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69525C3325510B7B00A43926 /* LaunchScreen.storyboard */; };
+		69525C42255B9A2F00A43926 /* PaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69525C41255B9A2F00A43926 /* PaymentVC.swift */; };
+		69525C48255B9DF400A43926 /* PayPal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69525C47255B9DF400A43926 /* PayPal.swift */; };
+		69525C4B255B9E0000A43926 /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69525C4A255B9E0000A43926 /* CreditCard.swift */; };
+		69525C4F255BB44500A43926 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69525C4E255BB44500A43926 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		69525C3125510B7B00A43926 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69525C3425510B7B00A43926 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69525C3625510B7B00A43926 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69525C41255B9A2F00A43926 /* PaymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentVC.swift; sourceTree = "<group>"; };
+		69525C47255B9DF400A43926 /* PayPal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayPal.swift; sourceTree = "<group>"; };
+		69525C4A255B9E0000A43926 /* CreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
+		69525C4E255BB44500A43926 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,43 @@
 		69525C2725510B7700A43926 /* Take My Money */ = {
 			isa = PBXGroup;
 			children = (
+				69525C46255B9DCE00A43926 /* Models */,
+				69525C45255B9DC800A43926 /* Views */,
+				69525C44255B9DBE00A43926 /* Controllers */,
 				69525C2825510B7700A43926 /* AppDelegate.swift */,
 				69525C2A25510B7700A43926 /* SceneDelegate.swift */,
-				69525C2C25510B7700A43926 /* PaymentDataVC.swift */,
 				69525C2E25510B7700A43926 /* Main.storyboard */,
 				69525C3125510B7B00A43926 /* Assets.xcassets */,
 				69525C3325510B7B00A43926 /* LaunchScreen.storyboard */,
 				69525C3625510B7B00A43926 /* Info.plist */,
 			);
 			path = "Take My Money";
+			sourceTree = "<group>";
+		};
+		69525C44255B9DBE00A43926 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				69525C2C25510B7700A43926 /* PaymentDataVC.swift */,
+				69525C41255B9A2F00A43926 /* PaymentVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		69525C45255B9DC800A43926 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		69525C46255B9DCE00A43926 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				69525C47255B9DF400A43926 /* PayPal.swift */,
+				69525C4A255B9E0000A43926 /* CreditCard.swift */,
+				69525C4E255BB44500A43926 /* Data.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69525C4F255BB44500A43926 /* Data.swift in Sources */,
+				69525C4B255B9E0000A43926 /* CreditCard.swift in Sources */,
 				69525C2D25510B7700A43926 /* PaymentDataVC.swift in Sources */,
+				69525C42255B9A2F00A43926 /* PaymentVC.swift in Sources */,
 				69525C2925510B7700A43926 /* AppDelegate.swift in Sources */,
+				69525C48255B9DF400A43926 /* PayPal.swift in Sources */,
 				69525C2B25510B7700A43926 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
