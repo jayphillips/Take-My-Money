@@ -12,13 +12,11 @@ struct CreditCard {
     var expirationDate: String
     var cvv: String
     var cardHolderName: String
-    var logoImage: String
     
-    init(creditCardNumber: String, expirationDate: String, cvv: String, cardHolderName: String, logoImage: String) {
+    init(creditCardNumber: String, expirationDate: String, cvv: String, cardHolderName: String) {
         self.creditCardNumber = creditCardNumber
         self.expirationDate = expirationDate
         self.cvv = cvv
         self.cardHolderName = cardHolderName
-        self.logoImage = logoImage
     }
 }

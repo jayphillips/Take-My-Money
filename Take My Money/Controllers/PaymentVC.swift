@@ -14,7 +14,6 @@ class PaymentVC: UIViewController {
     @IBOutlet weak var paymentMethodDisplayLabel: UILabel!
     @IBOutlet weak var paymentSavedNotificationLabel: UILabel!
     
-    
     var payPalEmail: String?
     var creditCardName: String?
     var creditCardNumber: String?
@@ -50,7 +49,6 @@ class PaymentVC: UIViewController {
             print("Nothing to do here")
         }
     }
-    
     
     @IBAction func editButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "PaymentDataVC", sender: self)
