@@ -13,6 +13,8 @@ class Data {
     
     var paymentType: PaymentType?
     
+    // Create an enum to hold the payment types 
+    
     enum PaymentType {
         case paypal, credit, wallet
     }

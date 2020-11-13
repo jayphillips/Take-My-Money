@@ -17,7 +17,6 @@
 		69525C48255B9DF400A43926 /* PayPal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69525C47255B9DF400A43926 /* PayPal.swift */; };
 		69525C4B255B9E0000A43926 /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69525C4A255B9E0000A43926 /* CreditCard.swift */; };
 		69525C4F255BB44500A43926 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69525C4E255BB44500A43926 /* Data.swift */; };
-		69525C52255CA13300A43926 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69525C51255CA13300A43926 /* RoundedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +32,6 @@
 		69525C47255B9DF400A43926 /* PayPal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayPal.swift; sourceTree = "<group>"; };
 		69525C4A255B9E0000A43926 /* CreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
 		69525C4E255BB44500A43926 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		69525C51255CA13300A43926 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +89,6 @@
 		69525C45255B9DC800A43926 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				69525C51255CA13300A43926 /* RoundedButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,7 +176,6 @@
 				69525C4F255BB44500A43926 /* Data.swift in Sources */,
 				69525C4B255B9E0000A43926 /* CreditCard.swift in Sources */,
 				69525C2D25510B7700A43926 /* PaymentDataVC.swift in Sources */,
-				69525C52255CA13300A43926 /* RoundedButton.swift in Sources */,
 				69525C42255B9A2F00A43926 /* PaymentVC.swift in Sources */,
 				69525C2925510B7700A43926 /* AppDelegate.swift in Sources */,
 				69525C48255B9DF400A43926 /* PayPal.swift in Sources */,

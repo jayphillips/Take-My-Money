@@ -9,10 +9,14 @@ import UIKit
 
 class PaymentVC: UIViewController {
     
+    // Set up IBOutlets
+    
     @IBOutlet weak var paymentMethodLogoImage: UIImageView!
     @IBOutlet weak var buyerFullNameLabel: UILabel!
     @IBOutlet weak var paymentMethodDisplayLabel: UILabel!
     @IBOutlet weak var paymentSavedNotificationLabel: UILabel!
+    
+    // Create variables to store data that is being passed from previous view controller.
     
     var payPalEmail: String?
     var creditCardName: String?
@@ -24,6 +28,8 @@ class PaymentVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Depending on which button was passed through, display data that was passed over.
+        
         switch paymentType {
         case .paypal:
             paymentMethodLogoImage.image = UIImage(named: "paypal")
@@ -32,8 +38,10 @@ class PaymentVC: UIViewController {
             paymentSavedNotificationLabel.text = ""
         case .credit:
             paymentMethodLogoImage.image = UIImage(systemName: "creditcard.fill")
+            let lastFour = String(creditCardNumber!.suffix(4))
+            let creditCardNumberString = String(format: "Card **** ***** **** " + lastFour)
             buyerFullNameLabel.text = creditCardName
-            paymentMethodDisplayLabel.text = creditCardNumber
+            paymentMethodDisplayLabel.text = creditCardNumberString
             
             if paymentSaved == true {
                 paymentSavedNotificationLabel.text = "Payment saved!"
@@ -50,9 +58,15 @@ class PaymentVC: UIViewController {
         }
     }
     
+    // Set up IBActions
+    
+    // edit button allows user to go back and change payment method.
+    
     @IBAction func editButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "PaymentDataVC", sender: self)
     }
+    
+    // Pay now button pressed will present an alert that notifies user that payment failed. 
     
     @IBAction func payNowButtonPressed(_ sender: Any) {
         let alert = UIAlertController(title: "Error", message: "Your payment was not successfully submitted. Please check your information and try again.", preferredStyle: .alert)
